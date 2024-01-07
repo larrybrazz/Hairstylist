@@ -1,5 +1,5 @@
 import React from "react";
-import "../services/header.css";
+import "./contact.css";
 const ContactHeader = () => {
   return (
     <div className="container-header font-bold ">
