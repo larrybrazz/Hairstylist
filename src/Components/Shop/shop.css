@@ -1,0 +1,144 @@
+/* shop styling */
+.shop-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: auto 70%;
+  gap: 20px;
+}
+
+.shop-img {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; 
+  /* transform: translate(0, 0); */
+}
+
+.shop-img:hover .overlay {
+  opacity: 1; 
+  /* transform: translate(0, -50%); */
+}
+/* Styling of the shop display  */
+.image-container {
+    overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0); /* Initial position */
+}
+
+/* Header style */
+.container-header{
+    content: "";
+    /* position: absolute;  */
+    width: 100%;
+    background-size: cover;
+    opacity: 0.5; 
+    color: white;
+
+}
+/* Model Styling */
+.model-display{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    transition: opacity 0.4s ease, visibility .4s ease, transform .5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    overflow: hidden;
+    z-index: 999;
+}
+
+.model-display.open{
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* Media Query */
+@media (max-width: 900px) {
+    .shop{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+}
+/* Add any additional styles you need */
+/* .bg-blue-900 {
+  background-color: #007bff; 
+} */
+
+/* .btn{
+  padding: 0.8rem;
+  margin-top:0.5rem;
+  background-image: linear-gradient(to bottom right, orange, green, yellow);
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.btn:hover{
+  transition: all 1s ease;
+  background-image: linear-gradient(to bottom right, green, yellow, red);
+}
+
+
+.search{
+  height: 4rem;
+  width:90% ;
+  margin: 0 auto;
+}
+
+.side-container{
+  width: 80%;
+  margin: 0 auto;
+}
+.side-container ul > li::before {
+  content: "\2022";
+  color: #11ef45;
+  display: inline-block;
+  width: 10px;
+}
+
+.bullet-point {
+  font-size: 40px;
+}
+
+.blog-details{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.blog-details .details{
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 0;
+}
+
+@media (max-width: 900px) {
+  .blog{
+    display: block;
+  }
+  .blog-details .details{
+    display: block;
+  }
+} */
